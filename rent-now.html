@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Supercar | LSD Supercars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="LSD Supercars">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="track.html">Track Vehicle</a></li>
+                <li><a href="payment-history.html">Payments</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="rent-process">
+        <div class="container">
+            <h1>How to Rent a Supercar</h1>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Car</h3>
+                    <p>Browse our collection of luxury vehicles and select your preferred model</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Select Dates</h3>
+                    <p>Pick your rental start and end dates using our easy calendar interface</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Complete Booking</h3>
+                    <p>Provide payment details and confirm your reservation</p>
+                </div>
+            </div>
+
+            <div class="rent-form">
+                <h2>Start Your Rental</h2>
+                <form id="rental-form">
+                    <div class="form-group">
+                        <label for="car-select">Select Car:</label>
+                        <select id="car-select" required>
+                            <option value="">Choose a car</option>
+                            <option value="ferrari">Ferrari 488</option>
+                            <option value="porsche">Porsche 911 Turbo</option>
+                            <option value="bmw">BMW M5</option>
+                            <option value="db5">Aston Martin DB5</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rental-date">Rental Dates:</label>
+                        <input type="date" id="rental-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" required>
+                    </div>
+                    
+                    <button type="submit" class="cta-btn">Complete Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

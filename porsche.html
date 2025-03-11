@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche 911 Turbo - Luxurious Supercar Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="LSD Supercars">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="track.html">Track Vehicle</a></li>
+                <li><a href="payment-history.html">Payments</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="car-details">
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="images/porsche-1.png" alt="Porsche 911 GT3 Front">
+            </div>
+            <div class="slides fade">
+                <img src="images/porsche-2.png" alt="Porsche 911 GT3 Side">
+            </div>
+            <div class="slides fade">
+                <img src="images/porsche-3.png" alt="Porsche 911 GT3 Interior">
+            </div>
+            <div class="slides fade">
+                <img src="images/porsche-4.png" alt="Porsche 911 GT3 Back">
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <div class="car-info">
+            <h1>Porsche 911 GT3</h1>
+            <p class="price">Rental Price: <strong>$5000 per day</strong></p>
+
+            <h3>Specifications:</h3>
+            <ul>
+                <li>Engine: 3.8L Twin-Turbo Flat-6</li>
+                <li>Horsepower: 572 HP</li>
+                <li>Top Speed: 198 mph</li>
+                <li>0-60 mph: 2.8 seconds</li>
+                <li>Transmission: 8-speed PDK</li>
+            </ul>
+
+            <h3>Owner Details:</h3>
+            <p>Name: Michael Smith</p>
+            <p>Contact: +91 555-5678</p>
+
+            <h3>Car Condition:</h3>
+            <p>✅ Immaculate condition, recent service</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <h2>Book This Car</h2>
+        <p>Select your rental dates below:</p>
+
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" required>
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" required>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="cta-btn">Book Now</button>
+                <button type="button" class="cta-btn rent-now" onclick="location.href='rent-now.html'">Instant Rent</button>
+            </div>
+        </form>
+        <p id="booking-message"></p>
+    </section>
+
+    <section class="map-section">
+        <h4>Location:</h4>
+        <div id="map">
+            <img src="images/maps.png" height="400px" width="1600px" style="border-radius:15px;" alt="Location">
+            <!-- Google Maps integration -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Luxurious Supercar Dreams. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Slideshow Script
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("slides");
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            Array.from(slides).forEach(slide => slide.style.display = "none");
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSD Supercars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="LSD Supercars">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="track.html">Track Vehicle</a></li>
+                <li><a href="payment-history.html">Payments</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience Luxury</h1>
+            <p>Premium Supercar Rentals</p>
+        </div>
+    </section>
+
+    <section class="car-list">
+        <h2>Available Supercars</h2>
+        <div class="cars">
+            <div class="car">
+                <div class="car-img-container">
+                    <img src="images/porsche.png" alt="Porsche 911 Turbo">
+                </div>
+                <div class="car-info">
+                    <h3>Porsche 911 GT3</h3>
+                    <p>$5000/day</p>
+                    <div class="button-group">
+                        <button class="view-details" onclick="location.href='porsche.html'">View Details</button>
+                        <button class="rent-now" onclick="location.href='rent-now.html'">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car">
+                <div class="car-img-container">
+                    <img src="images/ferrari488.jpg" alt="Ferrari 488">
+                </div>
+                <div class="car-info">
+                    <h3>Ferrari 488</h3>
+                    <p>$6500/day</p>
+                    <div class="button-group">
+                        <button class="view-details" onclick="location.href='ferrari.html'">View Details</button>
+                        <button class="rent-now" onclick="location.href='rent-now.html'">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car">
+                <div class="car-img-container">
+                    <img src="images/db5.png" alt="Ferrari 488">
+                </div>
+                <div class="car-info">
+                    <h3>Aston Martin DB5</h3>
+                    <p>$10000/day</p>
+                    <div class="button-group">
+                        <button class="view-details" onclick="location.href='DB5.html'">View Details</button>
+                        <button class="rent-now" onclick="location.href='rent-now.html'">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car">
+                <div class="car-img-container">
+                    <img src="images/bmw.jpg" alt="BMW M5">
+                </div>
+                <div class="car-info">
+                    <h3>BMW M5</h3>
+                    <p>$3500/day</p>
+                    <div class="button-group">
+                        <button class="view-details" onclick="location.href='bmw.html'">View Details</button>
+                        <button class="rent-now" onclick="location.href='rent-now.html'">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
